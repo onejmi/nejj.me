@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const getTemplate = () => {
+  return (
+    <h1>In construction...</h1>
+  );
+}
+
+//render everything, spout it onto #root div
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  getTemplate(),
   document.getElementById('root')
 );
