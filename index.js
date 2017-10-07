@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const getTemplate = () => {
+const getView = () => {
+  this.author = "scarger"
   return (
-    <h1>In construction...</h1>
+    <div>
+      <h1>In construction...</h1>
+      <h2>author: {this.author}</h2>
+    </div>
   );
 }
 
 //render everything, spout it onto #root div
 ReactDOM.render(
-  getTemplate(),
+  getView(),
   document.getElementById('root')
 );
