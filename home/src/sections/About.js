@@ -22,7 +22,7 @@ export default class About extends React.Component{
         return (
             
             <div style={styles.container}>
-                <Fade in={this.state.visible}>
+                <Fade in={this.state.visible} timeout={1000}>
                     <Media>
                         <Media.Left>
                             <img style={styles.image}
