@@ -40207,12 +40207,13 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
     render() {
         const imageLink = "https://www.gravatar.com/avatar/d6ff631c47e6e993584c88b83256cef4?s=400";
+
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { style: styles.container },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Fade */],
-                { 'in': this.state.visible },
+                { 'in': this.state.visible, timeout: 3000 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* Media */],
                     null,
@@ -40230,11 +40231,7 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                             { style: styles.title },
                             'About me'
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'p',
-                            { style: styles.description },
-                            'I\'m an enthusiastic & ready developer, who\'s always up for a challange. I was first introduced to computer science in 2013, where I was thourughly tought JavaScript. I then ventured on to other technologies, resulting in my proficiency in multiple demanded languages and libraries, such as Java, PHP, ES6/ES7, C#, SQL, Web, React, Android, Spigot and many, many others. I currently do not have a point of focus, as I\'m always willing to work with and establish every sector of an application. When I\'m free; and not hacking away, I do enjoy playing soccer, as well as long hikes up north.'
-                        ),
+                        DESCRIPTION,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'p',
                             { style: styles.description },
@@ -40254,6 +40251,12 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = About;
 
+
+const DESCRIPTION = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'p',
+    { style: styles.description },
+    'I\'m an enthusiastic & ready developer, who\'s always up for a challange. I was first introduced to computer science in 2013, where I was thourughly tought JavaScript. I then ventured on to other technologies, resulting in my proficiency in multiple demanded languages and libraries, such as Java, PHP, ES6/ES7, C#, SQL, Web, React, Android, Spigot and many, many others. I currently do not have a point of focus, as I\'m always willing to work with and establish every sector of an application. When I\'m free; and not hacking away, I do enjoy playing soccer, as well as long hikes up north.'
+);
 
 const styles = {
     container: {
