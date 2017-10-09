@@ -19,10 +19,11 @@ export default class About extends React.Component{
     render(){
         const imageLink = 
         "https://www.gravatar.com/avatar/d6ff631c47e6e993584c88b83256cef4?s=400";
+
         return (
             
             <div style={styles.container}>
-                <Fade in={this.state.visible} timeout={1000}>
+                <Fade in={this.state.visible} timeout={3000}>
                     <Media>
                         <Media.Left>
                             <img style={styles.image}
@@ -30,14 +31,7 @@ export default class About extends React.Component{
                         </Media.Left>
                         <Media.Body>
                             <Media.Heading style={styles.title}>About me</Media.Heading>
-                            <p style={styles.description}>
-                                I'm an enthusiastic & ready developer, who's always up for a challange. 
-                                I was first introduced to computer science in 2013, where I was thourughly 
-                                tought JavaScript. I then ventured on to other technologies, resulting in my proficiency in multiple
-                                demanded languages and libraries, such as Java, PHP, ES6/ES7, C#, SQL, Web, React, Android, Spigot and many, many others.
-                                I currently do not have a point of focus, as I'm always willing to work with and establish every 
-                                sector of an application. When I'm free; and not hacking away, I do enjoy playing soccer, as well as long hikes up north.
-                            </p>
+                            {DESCRIPTION}
                             <p style={styles.description}>
                                 Email: <a href="regracs@gmail.com">
                                     regracs@gmail.com
@@ -52,6 +46,18 @@ export default class About extends React.Component{
     }
 
 }
+
+const DESCRIPTION = (
+    <p style={styles.description}>
+    I'm an enthusiastic & ready developer, who's always up for a challange. 
+    I was first introduced to computer science in 2013, where I was thourughly 
+    tought JavaScript. I then ventured on to other technologies, resulting in my proficiency in multiple
+    demanded languages and libraries, such as Java, PHP, ES6/ES7, C#, SQL, Web, React, Android, Spigot and many, many others.
+    I currently do not have a point of focus, as I'm always willing to work with and establish every 
+    sector of an application. When I'm free; and not hacking away, I do enjoy playing soccer, as well as long hikes up north.
+</p>
+);
+
 
 const styles = {
     container: {
