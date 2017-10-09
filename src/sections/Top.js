@@ -9,6 +9,7 @@ export default class Top extends React.Component{
 
     /*arrow functions in the props section is bad practice, I know. 
     Performance doesn't really in my case because this is a lightweight profile page*/
+    
     render(){
         return (
         <Jumbotron style={styles.jumbotron}>
