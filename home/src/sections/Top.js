@@ -15,7 +15,7 @@ export default class Top extends React.Component{
         <Jumbotron style={styles.jumbotron}>
             <h1>It's scarger.</h1>
             <p>Your friendly, competent, 
-                creative and swift...neighboorhood developer</p>
+                creative and swift...neighbourhood developer</p>
             
             <p>
                 <Button bsStyle="primary" bsSize="large"
