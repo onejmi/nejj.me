@@ -47,18 +47,6 @@ export default class About extends React.Component{
 
 }
 
-const DESCRIPTION = (
-    <p style={styles.description}>
-    I'm an enthusiastic & ready developer, who's always up for a challenge. 
-    I was first introduced to computer science in 2013, where I was thoroughly 
-    taught JavaScript. I then ventured on to other technologies, resulting in my proficiency in multiple
-    demanded languages and libraries, such as Java, PHP, ES6/ES7, C#, SQL, Web, React, Android, Spigot and many, many others.
-    I currently do not have a point of focus, as I'm always willing to work with and establish every 
-    sector of an application. When I'm free.. wait nope.
-</p>
-);
-
-
 const styles = {
     container: {
         backgroundColor: "cyan",
@@ -77,3 +65,14 @@ const styles = {
         color: "white"
     }
 }
+
+const DESCRIPTION = (
+    <p style={styles.description}>
+    I'm an enthusiastic & ready developer, who's always up for a challenge. 
+    I was first introduced to computer science in 2013, where I was thoroughly 
+    taught JavaScript. I then ventured on to other technologies, resulting in my proficiency in multiple
+    demanded languages and libraries, such as Java, PHP, ES6/ES7, C#, SQL, Web, React, Android, Spigot and many, many others.
+    I currently do not have a point of focus, as I'm always willing to work with and establish every 
+    sector of an application. When I'm free.. wait nope.
+</p>
+);
