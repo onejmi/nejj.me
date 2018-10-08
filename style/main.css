@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Chakra+Petch");
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: lime;
+  width: 100%;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 120%;
+}
+
+@media (min-width: 650px) {
+  body {
+    font-size: 140%;
+  }
+}
+
+img {
+  border-radius: 50%;
+  width: 75px;
+}
+
+#top {
+  padding: 30px;
+  margin: auto 0;
+  height: 500px;
+  background-color: aquamarine;
+}
+
+@media (min-width: 650px) {
+  #top {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "picture info";
+  }
+}
+
+#top #profile {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+@media (min-width: 650px) {
+  #top #profile {
+    width: 80%;
+    max-width: 300px;
+    grid-area: picture;
+  }
+}
+
+#top #name {
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  #top #name {
+    text-align: left;
+    grid-area: info;
+  }
+}
+
+#top #role {
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  #top #role {
+    text-align: left;
+    grid-area: info;
+    margin-top: 100px;
+  }
+}
+
+#top #social {
+  margin-top: 50px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (min-width: 650px) {
+  #top #social {
+    margin: 0;
+    grid-area: info;
+    -ms-grid-rows: 50px;
+        grid-template-rows: 50px;
+  }
+}
+
+#top .social-link {
+  margin: auto 0;
+}
+
+@media (min-width: 650px) {
+  #top .social-link {
+    margin-top: 170px;
+  }
+}
+
+#projects {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#projects #ptitle {
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+
+@media (min-width: 650px) {
+  #projects #entries {
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #projects #entries .card:hover {
+    background-color: #00e598;
+  }
+}
+
+#projects #entries .card {
+  padding: 15px;
+  border-radius: 10%;
+  background-color: white;
+  margin-bottom: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#projects #entries .image {
+  display: block;
+  margin: 0 auto;
+}
+
+#projects #entries .title {
+  text-align: center;
+}
+
+footer {
+  padding: 15px;
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

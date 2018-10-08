@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
+
+$palette: (
+    light: lighten(aquamarine, 30%),
+    primary: aquamarine,
+    dark: darken(aquamarine, 30%),
+    secondary: lime
+);
+
+@function palette($colorName) {
+    @return map-get($palette, $colorName);
+}
+
+$largeWidth: 650px;
+
+@mixin large {
+    @media (min-width: #{$largeWidth}) {
+        @content
+    }
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: palette(secondary);
+    width: 100%;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 120%;
+
+    @include large {
+        font-size: 140%;
+    }
+
+
+}
+
+img {
+    border-radius: 50%;
+    width: 75px;
+}
+
+#top {
+    padding: 30px;
+    margin: auto 0;
+    height: 500px;
+    background-color: palette(primary);
+
+    @include large {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "picture info";
+    }
+
+    #profile {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+
+        @include large {
+            width: 80%;
+            max-width: 300px;
+            grid-area: picture;
+        }
+    }
+    
+    #name {
+        text-align: center;
+        @include large {
+            text-align: left;
+            grid-area: info;
+        }
+    }
+    
+    #role {
+        text-align: center;
+        @include large {
+            text-align: left;
+            grid-area: info;
+            margin-top: 100px;
+
+        }
+    }
+
+    #social {
+        margin-top: 50px;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @include large {
+            margin: 0;
+            grid-area: info;
+            grid-template-rows: 50px;
+        }
+    }
+    
+    .social-link {
+        margin: auto 0;
+        @include large {
+            margin-top: 170px;
+        }
+    }
+}
+
+#projects {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    #ptitle {
+        margin-top: 5%;
+        margin-bottom: 8%;
+    }
+
+    #entries {
+        @include large {
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .card:hover {
+                background-color: palette(dark);
+            }
+        }
+        .card {
+            padding: 15px;
+            border-radius: 10%;
+            background-color: white;
+            margin-bottom: 15%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        .image {
+            display: block;
+            margin: 0 auto;
+        }
+        .title {
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
