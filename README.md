@@ -1,5 +1,4 @@
-# Scarger's Website
-Check out [this][legacy] for the older version of my site.
-New site coming soon
+# scarger.github.io
+Welcome to the source of my website!
 
-[legacy]: https://scarger.github.io/legacy/
+(In construction...)
