@@ -1,3 +1,22 @@
+
+const vouches = [
+    {
+        author: "James Markuson",
+        review: "Scarger is the best developer!"
+    },
+    {
+        author: "Scuffi",
+        review: "Knows exactly what he's doing"
+    },
+    {
+        author: "Bob",
+        review: "This man needs a medal. Very fast, effecient, and you pay for what it's worth."
+    },
+
+]
+
+
+
 function animate(elem, style, unit, from, to, time, prop) {
     if (!elem) {
         return;
