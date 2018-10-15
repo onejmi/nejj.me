@@ -160,7 +160,7 @@ img {
   bottom: 30px;
   left: 0;
   right: 0;
-  margin: 190px auto;
+  display: none;
   padding-top: 500px;
   z-index: 9;
   border-radius: 50%;
@@ -170,6 +170,7 @@ img {
 
 @media (min-width: 650px) {
   #top .ct-btn-scroll {
+    display: block;
     margin: 125px auto;
   }
 }
@@ -207,17 +208,12 @@ img {
   margin-bottom: 15%;
   margin-left: 15%;
   margin-right: 15%;
-}
-
-@media (min-width: 650px) {
-  #projects #entries .card {
-    -webkit-animation-name: floatAnimation;
-            animation-name: floatAnimation;
-    -webkit-animation-duration: 8s;
-            animation-duration: 8s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-  }
+  -webkit-animation-name: floatAnimation;
+          animation-name: floatAnimation;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 #projects #entries .image {

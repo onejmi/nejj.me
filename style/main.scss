@@ -124,9 +124,10 @@ img {
         left: 0;
         right: 0;
         @include large {
+          display: block;
           margin: 125px auto;
         }
-        margin: 190px auto;
+        display: none;
         padding-top: 500px;
         z-index: 9;
         border-radius: 50%;
@@ -166,11 +167,9 @@ img {
             margin-left: 15%;
             margin-right: 15%;
             
-            @include large {
-                animation-name: floatAnimation;
-                animation-duration: 8s;
-                animation-iteration-count: infinite;
-            }
+            animation-name: floatAnimation;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
         }
         .image {
             display: block;
