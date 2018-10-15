@@ -4,7 +4,7 @@ $palette: (
     light: lighten(aquamarine, 30%),
     primary: aquamarine,
     dark: darken(aquamarine, 30%),
-    secondary: lime
+    secondary: darkblue
 );
 
 @function palette($colorName) {
@@ -19,13 +19,22 @@ $largeWidth: 650px;
     }
 }
 
+@keyframes floatAnimation {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(15deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-15deg);}
+    100% {transform: rotate(0deg);}
+}
+
 body, html {
     height: 100%;
+    background-image: url("https://coolbackgrounds.io/images/backgrounds/disco-75c0c1ef.png");
 }
 
 body {
     margin: 0;
-    background-color: palette(secondary);
+    
     width: 100%;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 120%;
@@ -46,7 +55,6 @@ img {
     padding: 30px;
     margin: auto 0;
     height: 500px;
-    background-image: url("https://static1.squarespace.com/static/55972c7ee4b069786e8c66ae/t/55c436afe4b03e392c36bc5d/1438922429457/ButtCapper_Banner2.gif");
 
     @include large {
         display: grid;
@@ -68,6 +76,7 @@ img {
     }
     
     #name {
+        color: white;
         text-align: center;
         @include large {
             text-align: left;
@@ -106,14 +115,35 @@ img {
             margin-top: 170px;
         }
     }
+
+    .ct-btn-scroll {
+        width: 49px;
+        height: 49px;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        @include large {
+          margin: 125px auto;
+        }
+        margin: 250px auto;
+        padding-top: 500px;
+        z-index: 9;
+        border-radius: 50%;
+        -webkit-transition: background-color 0.25s ease-in-out;
+        transition: background-color 0.25s ease-in-out;
+    }
 }
 
 #projects {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    
 
     #ptitle {
+        padding-top: 50px;
+        color: white;
         margin-top: 5%;
         margin-bottom: 8%;
     }
@@ -135,6 +165,12 @@ img {
             margin-bottom: 15%;
             margin-left: 15%;
             margin-right: 15%;
+            
+            @include large {
+                animation-name: floatAnimation;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+            }
         }
         .image {
             display: block;
@@ -143,6 +179,43 @@ img {
         .title {
             text-align: center;
         }
+    }
+}
+
+#vouches {
+    margin-top: 100px;
+    position: relative;
+    #vouch-outline {
+        display: block;
+        border-radius: 0%;
+        width: 90%;
+        height: 150%;
+        margin: auto;
+        z-index: 0;
+
+        @include large {
+            width: 50%;
+            height: 75%;
+        }
+    }
+    #vouch-text {
+        position: relative;
+        text-align: center;
+        top: -190px;
+        @include large {
+            top: -350px;
+        }
+        z-index: 1;
+    }
+    #voucher {
+        color: grey;
+        position: relative;
+        top: -170px;
+        @include large {
+            top: -290px;
+        }
+        text-align: center;
+        font-size: 20px;
     }
 }
 
