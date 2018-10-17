@@ -14,7 +14,7 @@ const vouches = [
     },
     {
         author: "FunniQuit @ MCM",
-        review: "This guy can code his ass off."
+        review: "This guy can code his a** off."
     },
     {
         author: "Nayalash Mohammad",
@@ -65,7 +65,23 @@ function changeVouch() {
     setTimeout(changeVouch, 4500);
 }
 
+function removePreloader() {
+    setTimeout(() => {
+        const preloader = document.getElementsByClassName("preloader-wrapper")[0];
+        preloader.style.opacity = 1;
+        //preloader.style.display = 'none';
+        const fadeOut = setInterval(() => {
+            preloader.style.opacity -= 0.005;
+            if(preloader.style.opacity <= 0.05) {
+                preloader.style.display = 'none';
+                clearInterval(fadeOut);
+            }
+        }, 5);
+    }, 3500);
+}
+
 window.onload = function () {
+    removePreloader();
     const scrollDownButton = document.getElementsByClassName("ct-js-btn-scroll")[0];
     scrollDownButton.onclick = function () {
         var target = document.getElementById("projects");
