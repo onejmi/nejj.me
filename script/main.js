@@ -1,17 +1,25 @@
 
 const vouches = [
     {
-        author: "James Markuson",
-        review: "Scarger is the best developer!"
+        author: "Master Mirror @ MCM",
+        review: "Worked with him on a project some time ago, a very adept and competent programmer. Would definitely recommend dealing with him."
     },
     {
-        author: "Scuffi",
-        review: "Knows exactly what he's doing"
+        author: "Tarvik @ MCM",
+        review: "Great Developer, along with a just a proactive and positive guy in general."
     },
     {
-        author: "Bob",
+        author: "J. M",
         review: "This man needs a medal. Very fast, effecient, and you pay for what it's worth."
     },
+    {
+        author: "FunniQuit @ MCM",
+        review: "This guy can code his ass off."
+    },
+    {
+        author: "Nayalash Mohammad",
+        review: "Fast, Friendly and Enthusiastic. An amazing Developer who loves to help people no matter their needs"
+    }
 
 ]
 
@@ -40,10 +48,29 @@ function animate(elem, style, unit, from, to, time, prop) {
     }
 }
 
+let currentVouchIndex = 0;
+let currentVouch;
+
+function changeVouch() {
+    currentVouchIndex++;
+    if(currentVouchIndex >= vouches.length) {
+        currentVouchIndex = 0;
+    }
+    currentVouch = vouches[currentVouchIndex];
+    const vouchText = document.getElementById("vouch-text");
+    const vouchAuthor = document.getElementById("voucher");
+    vouchText.innerHTML = currentVouch.review;
+    vouchAuthor.innerHTML = currentVouch.author;
+
+    setTimeout(changeVouch, 4500);
+}
+
 window.onload = function () {
-    var scrollDownButton = document.getElementsByClassName("ct-js-btn-scroll")[0];
+    const scrollDownButton = document.getElementsByClassName("ct-js-btn-scroll")[0];
     scrollDownButton.onclick = function () {
         var target = document.getElementById("projects");
         animate(document.scrollingElement || document.documentElement, "scrollTop", "", 0, target.offsetTop + 25, 750, true);
     }
+
+    changeVouch();
 };
