@@ -19,6 +19,10 @@ const vouches = [
     {
         author: "Nayalash Mohammad",
         review: "Fast, Friendly and Enthusiastic. An amazing Developer who loves to help people no matter their needs"
+    },
+    {
+        author: "Stalk3r77 @ MCM",
+        review: "Huge vouch, this guy is putting love in his work"
     }
 
 ]
