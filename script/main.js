@@ -10,7 +10,7 @@ const vouches = [
     },
     {
         author: "J. M",
-        review: "This man needs a medal. Very fast, effecient, and you pay for what it's worth."
+        review: "This man needs a medal. Very fast, effecient, and you pay for what it's worth"
     },
     {
         author: "FunniQuit @ MCM",
