@@ -33,8 +33,8 @@ export default class About extends React.Component{
                             <Media.Heading style={styles.title}>About me</Media.Heading>
                             {DESCRIPTION}
                             <p style={styles.description}>
-                                Email: <a href="regracs@gmail.com">
-                                    regracs@gmail.com
+                                Email: <a href="scarger@thisisoutdated">
+                                    scarger@thisisoutdated
                                     </a>
                             </p>
                         </Media.Body>
