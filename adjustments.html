@@ -1,0 +1,43 @@
+<html><head>
+    <title>Survey</title>
+  </head>
+
+  <body bgcolor="FFFFFF">
+    <div class="feedback"></div>
+    <script>
+      (function(t, e, s, o) {
+        getSurveyID();
+        var n, a, c;
+        (t.SMCX = t.SMCX || []),
+          e.getElementById(o) ||
+            ((n = e.getElementsByTagName(s)),
+            (a = n[n.length - 1]),
+            (c = e.createElement(s)),
+            (c.type = "text/javascript"),
+            (c.async = !0),
+            (c.id = o),
+            (c.src = [
+              "https:" === location.protocol ? "https://" : "http://",
+              "widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd7WnuXmrKllSQSuChpOpd0ly_2FonJx_2BWYhO33E3V6uYr4.js"
+            ].join("")),
+            a.parentNode.insertBefore(c, a));
+      })(window, document, "script", "smcx-sdk");
+
+        var data = (data = {});
+
+        const HOST = "https://api.surveymonkey.net";
+        const SURVEY_LIST_ENDPOINT = "/v3/surveys";
+
+        var uri = HOST + SURVEY_LIST_ENDPOINT;
+
+        var response = client.get(uri, (headers = headers));
+
+        var response_json = response.json();
+        // survey_list = response_json["data"]["surveys"]
+
+        console.log(response_json);
+      }
+    </script>
+  
+
+</body></html>
