@@ -6,7 +6,6 @@
     <div class="feedback"></div>
     <script>
       (function(t, e, s, o) {
-        getSurveyID();
         var n, a, c;
         (t.SMCX = t.SMCX || []),
           e.getElementById(o) ||
@@ -22,21 +21,6 @@
             ].join("")),
             a.parentNode.insertBefore(c, a));
       })(window, document, "script", "smcx-sdk");
-
-        var data = (data = {});
-
-        const HOST = "https://api.surveymonkey.net";
-        const SURVEY_LIST_ENDPOINT = "/v3/surveys";
-
-        var uri = HOST + SURVEY_LIST_ENDPOINT;
-
-        var response = client.get(uri, (headers = headers));
-
-        var response_json = response.json();
-        // survey_list = response_json["data"]["surveys"]
-
-        console.log(response_json);
-      }
     </script>
   
 
