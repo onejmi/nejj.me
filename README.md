@@ -1,4 +1,2 @@
-# scarger.github.io
-Welcome to the source of my website!
-
-(In construction...)
+# My Personal Website
+Welcome to the source code of my website!
