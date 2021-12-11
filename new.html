@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+  <style>
+    .popout {
+      animation: popout 1.11s ease;
+      -webkit-animation: popout 1.11s ease;
+    }
+    @keyframes popout {
+      from{transform:scale(0)}
+      80%{transform:scale(1.1)}
+      to{transform:scale(1)}
+    }
+    @-webkit-keyframes popout {
+      from{-webkit-transform:scale(0)}
+      80%{-webkit-transform:scale(1.1)}
+      to{-webkit-transform:scale(1)}
+    }
+  </style>
+</head>
+<body>
+<section class="hero is-danger is-fullheight" style="background-image: url('background.gif');">
+  <div class="hero-body column is-half is-offset-one-quarter popout">
+    <div class="card is-transparent px-6">
+      <div class="card-content">
+        <div class="content has-text-centered">
+          <h1 class="px-6 pt-4" style="font-size: 3em">Hey, I'm Omar.</h1>
+          <p style="font-family: Outfit; font-size: larger">
+            A <b>CS Student</b> & Aspiring <b>Software Engineer</b></p>
+          <br/>
+          <figure class="image is-inline-block" style="width: 256px; height: 256px">
+            <img src="computer.gif">
+          </figure>
+          <br/>
+          <p style="font-family: Outfit; font-size: large">Feel free to use the buttons below to learn more about me!</p>
+          <div class="buttons is-justify-content-center">
+            <button class="button is-info is-light" onclick="window.open('https://sepia-fountain-820.notion.site/a363e96abcc04022951adb4de806368b?v=ae5b43e8044d48b1a933cb710586c3e1')">Projects</button>
+            <button class="button is-success is-light" onclick="window.open('https://nejj.me/resume.pdf')">Resume</button>
+            <button class="button is-warning is-light" onclick="window.open('https://github.com/onejmi')">Github</button>
+            <button class="button is-danger is-light" onclick="window.open('https://www.linkedin.com/in/omar-e/')">Linkedin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
