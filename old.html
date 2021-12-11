@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Omar E</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lower {
+            margin-top: 10%;
+        }
+
+        .actions {
+            display: none
+         }
+
+         .animated {
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         @-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+         }
+    </style>
+  </head>
+  <body onload="animateName()">
+    <section class="section lower is-widescreen">
+        <div class="container center">
+            <div class="card" style="padding: 10px;">  
+                <h1 class="title" id="fullName"></h1>
+            </div>
+        </div>
+    </section>
+    <section class="section center">
+        <div class="actions" id="actionButtons"> 
+            <button class="button is-primary is-medium" id="welcomeButton" onclick="openGithub()">Hello!</button>
+        </div>
+    </section>
+    <script>
+        function animateName() {
+            const name = "Hey, I'm Omar."
+            document.getElementById('fullName').innerText = ''
+            let finalIndex = -1
+            const interval = setInterval(() => {
+                finalIndex++ 
+                if(finalIndex > name.length) {
+                    clearTimeout(interval)
+                    document.getElementById('actionButtons').classList.add('animated', 'fadeIn')
+                    document.getElementById('actionButtons').style.display = 'block'
+                }
+                document.getElementById('fullName').innerText = name.substring(0, finalIndex)
+            }, 150)
+        }
+
+        function openGithub() {
+            window.location.href = "https://github.com/scarger";
+        }
+    </script>
+  </body>
+</html>
